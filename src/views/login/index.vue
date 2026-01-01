@@ -43,8 +43,9 @@ export default {
       try {
         // console.log(forname)
         await this.$refs.form.validate()
-        const res = await this.$store.dispatch('user/login', this.form)
-        console.log(res)
+        await this.$store.dispatch('user/loginAction', this.form)
+        this.$message.success('登录成功')
+        this.$router.push('/')
       } catch (error) {
         console.log(error)
       }
