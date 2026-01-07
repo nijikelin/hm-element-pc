@@ -14,6 +14,7 @@ const router = new VueRouter({
     {
       path: '/',
       component: Layout,
+      redirect: '/dashboard',
       children: [
         { path: 'dashboard', component: DashBoard },
         { path: 'article', component: Article }
